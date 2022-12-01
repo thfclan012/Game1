@@ -27,6 +27,7 @@ namespace Game1
 
     private void button1_Click(object sender, EventArgs e)
     {
+      
       //ROLE
       //if index= kati
       switch (index)
@@ -48,7 +49,9 @@ namespace Game1
           break;
         case 6:
           textBox6.Text = Roll().ToString();
+          button3.Visible = true;
           break;
+
       }
 
       //kate fora pou trexei index+1
@@ -104,6 +107,44 @@ namespace Game1
       textBox6.Text = "";
       label7.Text = "";
       label7.Visible = false;
+      button3.Visible = false;
+      
+
+    }
+
+    private void button3_Click(object sender, EventArgs e)
+    {
+      if (int.Parse(textBox1.Text) >= 9)
+      {
+        listBox1.Items.Add("Warrior");
+      }
+      if (int.Parse(textBox2.Text) >= 9)
+      {
+        listBox1.Items.Add("Thief");
+      }
+      if (int.Parse(textBox3.Text) >= 9)
+      {
+        listBox1.Items.Add("Mage");
+      }
+      if (int.Parse(textBox4.Text) >= 9)
+      {
+        listBox1.Items.Add("Priest");
+      }
+      
+    }
+
+    private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void label1_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void textBox1_TextChanged(object sender, EventArgs e)
+    {
 
     }
   }

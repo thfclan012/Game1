@@ -46,6 +46,7 @@ namespace Game1
       this.button3 = new System.Windows.Forms.Button();
       this.panel1 = new System.Windows.Forms.Panel();
       this.label7 = new System.Windows.Forms.Label();
+      this.listBox1 = new System.Windows.Forms.ListBox();
       this.panel1.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -58,6 +59,7 @@ namespace Game1
       this.label1.Size = new System.Drawing.Size(49, 15);
       this.label1.TabIndex = 0;
       this.label1.Text = "Strenght";
+      this.label1.Click += new System.EventHandler(this.label1_Click);
       // 
       // textBox1
       // 
@@ -66,6 +68,7 @@ namespace Game1
       this.textBox1.Name = "textBox1";
       this.textBox1.Size = new System.Drawing.Size(100, 20);
       this.textBox1.TabIndex = 1;
+      this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
       // 
       // label2
       // 
@@ -185,6 +188,8 @@ namespace Game1
       this.button3.TabIndex = 14;
       this.button3.Text = "CONFIRM";
       this.button3.UseVisualStyleBackColor = true;
+      this.button3.Visible = false;
+      this.button3.Click += new System.EventHandler(this.button3_Click);
       // 
       // panel1
       // 
@@ -210,11 +215,21 @@ namespace Game1
       this.label7.Visible = false;
       this.label7.Click += new System.EventHandler(this.label7_Click);
       // 
+      // listBox1
+      // 
+      this.listBox1.FormattingEnabled = true;
+      this.listBox1.Location = new System.Drawing.Point(415, 101);
+      this.listBox1.Name = "listBox1";
+      this.listBox1.Size = new System.Drawing.Size(120, 95);
+      this.listBox1.TabIndex = 16;
+      this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(574, 304);
+      this.Controls.Add(this.listBox1);
       this.Controls.Add(this.panel1);
       this.Controls.Add(this.textBox6);
       this.Controls.Add(this.textBox5);
@@ -258,6 +273,7 @@ namespace Game1
     private System.Windows.Forms.Button button3;
     private System.Windows.Forms.Panel panel1;
     private System.Windows.Forms.Label label7;
+    private System.Windows.Forms.ListBox listBox1;
   }
 }
 
